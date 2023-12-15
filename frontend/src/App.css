@@ -1,0 +1,259 @@
+
+/*  Home.jsx */
+
+.App {
+  position: relative;
+}
+
+.blur {
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+body{
+  background-color: beige;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+.content-container {
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+}
+.text-container {
+  width: 80%; 
+  line-height: 2em;
+}
+button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #2980b9;
+  }
+}
+.image-container {
+  overflow: hidden;
+  width: 80%;
+  margin: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+  .text-container,
+  .image-container {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .image-container img {
+    width: 100%; 
+    height: auto; 
+    object-fit: contain; 
+  }
+  .content-container {
+    flex-direction:column;
+    align-items: center;
+  }
+}
+
+#call{
+  margin-bottom: 0 !important; 
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: xx-large;
+  font-weight: bold;
+  margin: 0 !important;
+  padding: 5px !important;
+ 
+}
+#intern{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size :55px;
+  color:#0698fa;
+  font-style: italic;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#para{
+
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size :larger;
+  margin: 5px 0 15px 30px ;
+}
+#but{
+  font-size:x-large;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: #0698fa;
+  width:30%;
+}
+
+/*  End Home.jsx */
+
+
+
+/*LoginForm*/
+#log{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* Horizontal alignment */
+  align-items: center; /* Vertical alignment */ 
+}
+body{
+  background-image: url('new.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.loginform{  
+  width: 100%; /* Adjust the width as needed */
+  padding: 10px;
+  border: 2px solid blue;
+  border-radius: 5px;
+  margin: 0px;
+  justify-content: center; /* Horizontal alignment */
+  align-items: center; /* Vertical alignment */
+}
+
+
+@media only screen and (max-width: 600px)  {
+  body {
+    overflow-x: hidden;
+  }
+
+  #log {
+      width: 100%; /* Adjust the width for smaller screens */
+  }
+}
+#head{
+   
+  color:blue;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.btn-log{
+  width:100%;
+}
+.text{
+  width:100%
+}
+
+
+/* AddMentor.jsx */
+
+.mentor{
+  margin: 5% auto;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+.mentorhead{
+  color:black;
+  font-size:x-large;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+ .mentorform{  
+  padding: 10px 10px 17px 10px;
+  border: 2px solid blue;
+  border-radius: 5px;
+  justify-content: center; 
+  align-items: center; 
+} 
+.submit{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width:100%;
+  background-color:rgb(0, 89, 255);
+}
+.submit:hover{
+  background-color:rgb(255, 17, 0);
+  color: white;
+   
+}
+.textfields{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: white;
+  margin-left: 50px;
+  width:80%
+}
+@media only screen and (max-width: 600px){
+  .mentor{
+    margin:auto;
+  }
+}
+
+/* End Addmentor.jsx */
+
+
+/* Addproject.jsx */
+
+.addproject-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5% auto;
+  max-width: 1500px;
+  width: 100%;
+}
+.pro{
+  margin: auto;
+  display: flex;
+  justify-content: column; 
+  align-items: center; 
+}
+.prohead{
+  color:black;
+  font-size:x-large;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-left: 8px;
+}
+ .proform{ 
+  width:100%; 
+  padding: 10px 10px 17px 10px;
+  border: 2px solid blue;
+  border-radius: 5px;
+  justify-content: column; 
+  align-items: center; 
+} 
+.textfields{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: white;
+  width:80%;
+}   
+.submit{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width:100%;
+  background-color:rgb(0, 89, 255);
+  margin-left: 8px !important;
+  align-items: center;
+  justify-content: center;
+}
+
+/* End Addproject.jsx */
+
+

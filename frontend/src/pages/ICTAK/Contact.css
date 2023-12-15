@@ -1,0 +1,30 @@
+.firstColumn { background-image: url('./images/contactus3.avif');
+    background-size: cover;
+    
+
+    
+    
+
+    
+    
+    /* Additional styles */
+  }
+  
+  .secondColumn {
+    background-image: url('./images/contactform.avif');
+    background-size: cover;
+    
+    /* Additional styles */
+  }
+  h1{
+    text-align: center;
+    padding-top: 10%;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+    
+  }
+  h2{
+    text-align: center;
+    padding-top: 10%;
+    
+  }

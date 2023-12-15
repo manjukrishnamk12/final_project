@@ -1,0 +1,325 @@
+
+/*  stat of Admin Dashboard  */
+
+.icon {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 20px;
+}
+.icon_header {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 26px;
+}
+.icon, .icon_header {
+  margin-right: 5px;
+}
+
+.close_icon {
+  color: white;
+  margin-left: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: 260px 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas:
+    'sidebar header header header'
+    'sidebar main main main';
+  height: 100vh;
+}
+
+/* Header  */
+.header {
+  grid-area: header;
+  height: 60px;
+  background-color: beige;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+  box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
+}
+
+.menu-icon {
+  display: none;
+}
+/* End Header  */
+
+
+/* Sidebar  */
+
+#sidebar {
+  grid-area: sidebar;
+  height: 100%;
+  background-color: #6f7584;
+  overflow-y: auto;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 15px 0px 10px;
+  margin-bottom: 30px;
+}
+
+.sidebar-title > span {
+  display: none;
+}
+
+.sidebar-brand {
+  margin-top: 15px ;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sidebar-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar-list-item {
+  padding: 20px 20px 20px 20px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.sidebar-list-item:hover {
+  background-color: rgba(178, 156, 156, 0.2);
+  cursor: pointer;
+}
+
+.sidebar-responsive {
+  display: inline !important;
+  position: absolute;
+  z-index: 12 !important;
+}
+
+/* End Sidebar  */
+
+/* Main  */  
+
+.main-container {
+  grid-area: main;
+  overflow-y: auto;
+  padding: 20px 20px;
+  color: rgba(0, 0, 0, 0.95);
+}
+
+.main-title {
+  margin-top: 40px;
+  display: grid;
+  justify-content: center;
+}
+
+.main-cards {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.card:first-child {
+  background-color: #95918d;
+}
+
+.card:nth-child(2) {
+  background-color: #95918d;
+}
+.card-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-inner > .card_icon {
+  font-size: 25px;
+}
+
+
+/* End Main  */
+
+
+/* Medium <= 992px */
+  
+@media screen and (max-width: 992px) {
+  #grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      'header'
+      'main';
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  .menu-icon {
+    display: inline;
+  }
+  .close_icon{
+    display: inline;
+  }
+
+  .sidebar-title > span {
+    display: inline;
+  }
+}
+/* Small <= 768px */
+  
+@media screen and (max-width: 768px) {
+  .main-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+}
+
+/* Extra Small <= 576px */
+
+@media screen and (max-width: 576px) {
+  .hedaer-left {
+    display: none;
+  }
+}
+
+/*  End of dashboard */
+
+
+/*  Projectview.jsx */
+
+#card-containerp {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.cardp {
+  width: 100%;
+  max-width: 345px;
+  height: 500px;
+  margin: 5% auto;
+  transition: transform 0.3s ease;
+}
+
+.cardp:hover {
+  transform: scale(1.05);
+}
+
+.card-mediap {
+  height: 140px;
+}
+
+.card-contentp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+   height: 300px; 
+} 
+
+.card-contentp .MuiTypography-body2:last-child {
+  font-weight: bold;
+}
+
+.card-actionsp {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.card-actionsp button {
+  border-radius: 5px;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: white; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
+}
+
+.card-actionsp button:hover {
+  background-color: #007bff;
+  color: rgb(22, 21, 21);
+}
+
+#update:hover {
+  background-color: #2f00ff;
+  color: rgb(10, 10, 10);
+}
+/* Media query for small screens */
+@media screen and (max-width: 600px) {
+  #card-containerp {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .cardp {
+    max-width: 100%; 
+  }
+}
+
+/*  End Projectview.jsx */
+
+/*  Mentorview.jsx  */
+
+.table-container {
+  width:100%;
+  margin-top: 0 !important; 
+  } 
+  
+  .mentor-table {
+    margin-top: 0 !important;
+    border-collapse: collapse;
+    border: 1px solid #51c4d8;
+    
+  }
+  .table-cell {
+    border: 1px solid  #4bd4ec; /*Add border to cells*/
+    padding: 8px; /* Add padding to cells */
+    text-align: left; /* Adjust text alignment as needed */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .action-button {
+    margin-right: 4px; /* Adjust margin between buttons */
+  }
+  .mentor-table th {
+    background-color: #838b8d; /* Background color for table head */
+    color: white;
+    font-size: larger;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .mentor-table tbody tr:hover {
+    background-color: #def1f8; /* Background color on hover */
+  }
+  .mentor-table td .icon {
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .mentor-table {
+      overflow-x: auto;
+      display: block;
+    }
+   
+  
+  }
+
+/*  End Mentorview.jsx */
